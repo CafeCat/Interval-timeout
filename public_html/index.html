@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Play interval and timeout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="main.js" type="text/javascript"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="header">
+      <form class="form-inline">
+        <div class="form-group">
+          <label class="sr-only" for="set_box">Show me boxes </label>
+          <input type="text" class="form-control" style="width:100px;" id="set_box" placeholder="a number" value="25">&nbsp;
+          <a href="#" class="btn btn-default" id="btn_play"><b>Play</b></a>&nbsp;
+          <a href="#" class="btn btn-danger" id="btn_stop"><b>Stop</b></a>
+        </div>
+      </form>   
+    </div>
+    <div class="box-container">
+      <div class="box"><span></span></div>
+    </div>
+  </body>
+</html>
