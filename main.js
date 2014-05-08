@@ -9,6 +9,7 @@ $(document).ready(function() {
   };
   
   $('#btn_play').click(function(){
+    isPaused = false;
     setupView($('#set_box').val());
     start(0);
   });
