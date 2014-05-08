@@ -14,26 +14,24 @@ $(document).ready(function() {
   });
   
   $('#btn_stop').click(function(){
-    console.log(intervalIds);
-    for(var i=0; i<intervalIds.length; i++){
-      clearInterval(i);
-    }
+    isPaused = true;
   });
-  
+  var isPaused = false;
   var intervalIds = [];
   
   function start(inx){
-    if(inx<$('.box-container').find('.box').length){
+    if(inx<$('.box-container').find('.box').length && isPaused===false){
       setTimeout(function(){
         var ant = new animateTheNumber($('.box:eq('+inx+')').find('span'), 700+inx*1000, 700+inx*100, 700, 1000);
         intervalIds.push(ant.start());
+        console.log(intervalIds);
         inx++;
         start(inx);
       },500);
     }
   };
   
-  setupView(3);
+  setupView(10);
   start(0);
   
   function updateNumber(obj, fn, sn) {
@@ -50,19 +48,25 @@ $(document).ready(function() {
     updateNumber(updateObj, startNum, total);
     this.start = function() {
       var animatePoints = setInterval(function() {
-        if (startNum > Number(destNum)) {
+        console.log('setInterval->'+Number(animatePoints));
+        if (startNum > Number(destNum) && (isPaused===false)) {
           startNum = Number(destNum);
           updateNumber(updateObj, startNum, total);
           clearInterval(animatePoints);
           console.log('clear->'+Number(animatePoints));
         } else {
-          incPoints();
+          if(isPaused===false){
+            incPoints();
+          }else{
+            clearInterval(animatePoints);
+          }
         }
       }, setAnimateDuration);
       function incPoints() {
         startNum = startNum + incN;
         updateNumber(updateObj, startNum, total);
       }
+      console.log('start->'+Number(animatePoints));
       return animatePoints;
     };
   }
