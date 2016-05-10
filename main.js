@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //test comment 1
+=======
+>>>>>>> ccf678b4bd9755b4e659ed86efb07a7b01e31c54
 $(document).ready(function() {  
   var boxTemplate =  $('.box-container').find('.box').prop('outerHTML');
   function setupView(num){
