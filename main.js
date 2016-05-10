@@ -4,6 +4,7 @@
 //test comment 3
 //test comment 4
 //test comment 5
+//test comment 6
 $(document).ready(function() {  
   var boxTemplate =  $('.box-container').find('.box').prop('outerHTML');
   function setupView(num){
