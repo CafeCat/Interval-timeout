@@ -1,0 +1,28 @@
+body{
+  background-color: #efefef;
+}
+.header{
+  height: 48px;
+  background-color: #696969;
+  padding: 5px;
+}
+.box-container{
+  overflow: auto;
+  width:100%;
+  margin: 20px auto 20px auto;
+}
+.box{
+  width:19.9%;
+  border: 1px solid #dcdcdc;
+  height: 100px;
+  float:left;
+  margin: 0px 1px 1px 0px;  
+  text-align: center;
+}
+.box span{
+  font-family: 'PT Sans', sans-serif;
+  display: inline-block;
+  line-height: 100px;
+  font-weight: bold;
+  font-size:26px;
+}
