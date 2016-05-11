@@ -1,1 +1,0 @@
-//test sample6.js
