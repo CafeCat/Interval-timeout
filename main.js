@@ -7,6 +7,7 @@
 //test post-merge again
 //test post-merge 3
 //test post-merge 4
+//cocacola say : me 1
 $(document).ready(function() {  
   var boxTemplate =  $('.box-container').find('.box').prop('outerHTML');
   function setupView(num){
