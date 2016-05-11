@@ -3,6 +3,7 @@
 //test comment 2
 // test comment 3
 //test comment 4
+//test post-merge
 $(document).ready(function() {  
   var boxTemplate =  $('.box-container').find('.box').prop('outerHTML');
   function setupView(num){
