@@ -9,6 +9,7 @@
 //test post-merge 4
 //cocacola say : me 1
 //cocacola say: test ssh
+//cocacola say: test username back
 $(document).ready(function() {  
   var boxTemplate =  $('.box-container').find('.box').prop('outerHTML');
   function setupView(num){
